@@ -1,4 +1,4 @@
-from data_test import input_test
+from data_test import input_test, output_test
 
 GP_mode=['sin_inicilizar']*32
 GP_pull=['sin_inicilizar']*32
@@ -20,5 +20,6 @@ class Pin():
                 return 'indefinido'
         else:
             GP_out_value[self.id]=x
+            output_test(self.id,x)
             
  
