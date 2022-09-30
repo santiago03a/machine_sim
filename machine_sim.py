@@ -21,5 +21,6 @@ class Pin():
         else:
             GP_out_value[self.id]=x
             output_test(self.id,x)
+            return None
             
  
