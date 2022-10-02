@@ -37,12 +37,14 @@ class StateMachine:
         fsms[id_]=self
         pass
 '''____init__ es una funcion a la cual la cual tienen ciertos parametros de entradas, algunos definidos con un valor,
-se definen dos varibles '''
+se definen dos varibles globales, que posteriormente son definidas como self, por lo tanto se sabe en que momento va a inicializar la funcion en el programa, 
+posteriormente se crea una lista vacia, en la cual posteriormente se van a imprimir diferentes datos que son comparados e ingresados en el sistema'''
         
   def active(self, x=None):
     '''Esta rutina simula exclisivamnte esa FSM. Sería interesante crear simulación en parlelo con otras FSM'''
     if x==1:
         print('Está pendiente de realizar la simulacón')
+        '''definimos el esatdo de la variable x para un valor'''
 
 fsms=[None]*8
 
@@ -61,20 +63,20 @@ class nop:
     def __getitem__(self,name):
         #print('nop.__getattr__',name)
         pass
-        
+'''clase decorador, en la cial se crea variable global, e inicia la lista de instrumentos, imprimiendo unos variables definidas'''        
 class set(nop):
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
         pass
-   
+  '''clase set en la cual se definen variables de entrada para un parametro, y hereda unos datos con la funcion super'''        
 class wrap_target(nop):
     def __init__(self,*args, **kwargs):
          super().__init__(*args, **kwargs)
          pass 
-  
+  '''clase wrap, en la cial se definen variables de entrada para un parametro, y se heredan unos datos'''       
 class wrap(nop):
     def __init__(self,*args, **kwargs):
          super().__init__(*args, **kwargs)
          pass 
          
-         
+      '''clase wrap, en la cial se definen variables de entrada para un parametro, y se heredan unos datos''         
